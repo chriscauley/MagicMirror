@@ -4,6 +4,24 @@
  * MIT Licensed.
  */
 
+var OPEN_WEATHER_APP_ID = '3dc9d16750474387b0a3ddd96d55b15c';
+var COMPLIMENTS = {
+	morning: [
+		"Good morning!",
+		"Enjoy your day!",
+		"How was your sleep?"
+	],
+	afternoon: [
+		"Good afternoon!",
+		"Looking sharp today!"
+	],
+	evening: [
+		"Long day?",
+		"Brush your teeth!",
+		"Is it bed time yet?",
+	]
+}
+
 var config = {
 	port: 8080,
 
@@ -34,15 +52,16 @@ var config = {
 		},
 		{
 			module: 'compliments',
-			position: 'lower_third'
+			position: 'lower_third',
+			config: { compliments: COMPLIMENTS, }
 		},
 		{
 			module: 'currentweather',
 			position: 'top_right',
 			config: {
-				location: 'New York',
+				location: 'Houston',
 				locationID: '',  //ID from bulk.openweather.org/sample/
-				appid: 'YOUR_OPENWEATHER_API_KEY'
+				appid: OPEN_WEATHER_APP_ID
 			}
 		},
 		{
@@ -50,28 +69,42 @@ var config = {
 			position: 'top_right',
 			header: 'Weather Forecast',
 			config: {
-	            location: 'New York',
-				locationID: '5128581',  //ID from bulk.openweather.org/sample/
-	            appid: 'YOUR_OPENWEATHER_API_KEY'
+							location: 'Houston',
+							locationID: '5128581',  //ID from bulk.openweather.org/sample/
+							appid: OPEN_WEATHER_APP_ID
 			}
 		},
 		{
-			module: 'newsfeed',
-			position: 'bottom_bar',
+			module: 'tweet_feed',
+			position: 'bottom_left',
 			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true
+				keys: {
+					consumer_key: 'rBP036W94oFvjbpLJtezrW7lO',
+					consumer_secret: 'LFyVKb8fRzpbPYu77oRpn8CStVVR7GLbTour9ZcBlrICajS4qS',
+					access_token_key: '314071089-Uc8yZcrUitW2aT0dOPLPBGOiplZbPgAJ3JvNQLqK',
+					access_token_secret: 'MX1rLfMZwfjk73XnDdkFsNuoI3K6JfIAXBomQf6ijTOcq'
+				}
 			}
 		},
+		{
+			module: 'MMM-wordnik',
+			position: 'bottom_right',
+			config: {
+				api_key: '77aa061be1b9573118507993c5a055761c9d0d3e885ccd419'
+			}
+		},
+    {
+      module: 'MMM-Wunderlist',
+      position: 'top_right',  // This can be any of the regions. Best results in left or right regions.
+      header: 'Wunderlist', // This is optional
+      config: {
+        accessToken: "82425b6d9b31d5f48ec8a09626fc9d3f1ecdc83ed0c8d1a118f22a659001",
+        clientID: "ec400e34d1c9b5d9f1a4",
+        lists: ["inbox","Groceries"]
+      }
+    }
 	]
 
 };
-
 /*************** DO NOT EDIT THE LINE BELOW ***************/
 if (typeof module !== 'undefined') {module.exports = config;}
