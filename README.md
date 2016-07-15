@@ -25,6 +25,8 @@ Copy and past the following code in between the two specified lines in `config/c
 
 You can change the position of the clock to any of the following:
 
+| **Option** | **Description** |
+| --- | --- |
 | `position` | The location of the module in which the module will be loaded. Possible values are `top_ bar`, `top_left`, `top_center`, `top_right`, `upper_third`, `middle_center`, `lower_third`, `bottom_left`, `bottom_center`, `bottom_right`, `bottom_bar`, `fullscreen_above`, and `fullscreen_below`. This field is optional but most modules require this field to set. Check the documentation of the module for more information. Multiple modules with the same position will be ordered based on the order in the configuration file. |
 
 _ADVANCED_: Please come back to this later if you wish to further customize the clock. Additional clock options can be found at the following URL. 
@@ -72,7 +74,7 @@ _ADVANCED OPTIONS_:
 ### Weather Forecast
 
 ```javascript
-{
+		{
 			module: 'weatherforecast',
 			position: 'top_right',
 			header: 'Weather Forecast',
