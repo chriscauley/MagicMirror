@@ -29,7 +29,7 @@ You can change the position of the clock to any of the following:
 | --- | --- |
 | `position` | The location of the module in which the module will be loaded. Possible values are `top_ bar`, `top_left`, `top_center`, `top_right`, `upper_third`, `middle_center`, `lower_third`, `bottom_left`, `bottom_center`, `bottom_right`, `bottom_bar`, `fullscreen_above`, and `fullscreen_below`. This field is optional but most modules require this field to set. Check the documentation of the module for more information. Multiple modules with the same position will be ordered based on the order in the configuration file. |
 
-_ADVANCED_: Please come back to this later if you wish to further customize the clock. Additional clock options can be found at the following URL. 
+**ADVANCED OPTIONS**: Please come back to this later if you wish to further customize the clock. Additional clock options can be found at the following URL. 
 
 https://github.com/MichMich/MagicMirror/tree/master/modules/default/clock#configuration-options
 
@@ -53,7 +53,7 @@ Calendar module config:
 		},
 ```
 
-_ADVANCED OPTIONS_: https://github.com/MichMich/MagicMirror/tree/master/modules/default/calendar#configuration-options
+**ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/calendar#configuration-options
 
 ### Current Weather
 
@@ -69,7 +69,7 @@ _ADVANCED OPTIONS_: https://github.com/MichMich/MagicMirror/tree/master/modules/
 		},
 ```
 
-_ADVANCED OPTIONS_:
+**ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/currentweather#configuration-options
 
 ### Weather Forecast
 
@@ -85,6 +85,8 @@ _ADVANCED OPTIONS_:
 			}
 		},
 ```
+
+**ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/weatherforecast#configuration-options
 
 ### Twitter Feed
 
@@ -104,7 +106,43 @@ _ADVANCED OPTIONS_:
 		},
 ```
 
-_ADVANCED OPTIONS_:
+If you do not have a twitter account you will need to make one and follow a few people to use this.
+
+Once you have a twitter account you will need to log into twitter and get a private key. This unique code tells twitter that you have given any program posessing these keys permission to access your account.
+
+1) *Create Application* - Go to https://apps.twitter.com/, login, click "Create new app" (top right corner), and fill out the form. If you don't have a website, just enter "http://example.com".
+
+2) *Generate Keys* - You should be redirected to the settings page for your new application. Click the "Keys and Access Tokens" tab. Scroll down to "Token Actions" and click "Create Token".
+
+3) *Configure mirror* - Open your application config file, `config/config.js`, in your favorite codeeditor. And add the module config from the previou section to the list of modules.
+
+4) *Copy Tokens to the Config* - Copy the consumer key, consumer secret, access token, and access token secret to the appropriate places in the module config you copied from step 3.
+
+**ADVANCED OPTIONS**: Twitter feed has no advanced options other than the width shown above
+
+### News Module
+
+```
+modules: [
+	{
+		module: 'newsfeed',
+		position: 'bottom_bar', // This can be any of the regions. Best results in center regions.
+		config: {
+			feeds: [
+				{
+					title: "New York Times",
+					url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+				},
+				{
+					title: "BBC",
+					url: "http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk",
+				},
+			]
+		}
+	}
+]
+
+**ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/newsfeed#configuration-options
 
 ### Word of the day
 
@@ -118,7 +156,7 @@ _ADVANCED OPTIONS_:
 		},
 ```
 
-_ADVANCED OPTIONS_:
+**ADVANCED OPTIONS**: Word of the day has no advanced options.
 
 ### Todo list
 
@@ -135,7 +173,23 @@ _ADVANCED OPTIONS_:
 		},
 ```
 
-_ADVANCED OPTIONS_:
+To use the todo list you must create a Wunderlist account and then generate an API key.
+
+1) Go to https://www.wunderlist.com
+
+2)
+
+Go to https://developer.wunderlist.com/apps/new - you should already be logged in with the account created above
+
+Enter any name ("Magic Mirror", for example) and enter `http://example.com` for the APP URL and `http://example.com/callback` for the APP CALLBACK. Hit create app.
+
+Copy the CLIENT ID into the `clientID` field in the todo list config.
+
+Press "Create Access Token". Copy the access token at the top of the last page into the `accessToken` field in the todo list config.
+
+Load the Magic Mirror from the terminal and the todo list should appear.
+
+**ADVANCED OPTIONS**: https://github.com/paviro/MMM-Wunderlist#configuration-options
 
 };
 /*************** DO NOT EDIT THE LINE BELOW ***************/
