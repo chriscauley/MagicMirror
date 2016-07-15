@@ -13,7 +13,7 @@ Open the mirror by clicking on the terminal (black screen icon in the top left c
 
 Copy and past the following code in between the two specified lines in `config/config.js`. This gives a clock.
 
-```
+```javascript
 		{
 			module: 'clock',
 			position: 'top_left'
@@ -35,7 +35,7 @@ https://github.com/MichMich/MagicMirror/tree/master/modules/default/clock#config
 
 Calendar module config:
 
-```
+```javascript
 		{
 			module: 'calendar',
 			header: 'US Holidays',
@@ -55,7 +55,7 @@ _ADVANCED OPTIONS_: https://github.com/MichMich/MagicMirror/tree/master/modules/
 
 ### Current Weather
 
-```
+```javascript
 		{
 			module: 'currentweather',
 			position: 'top_right',
@@ -71,7 +71,7 @@ _ADVANCED OPTIONS_:
 
 ### Weather Forecast
 
-```
+```javascript
 {
 			module: 'weatherforecast',
 			position: 'top_right',
@@ -86,7 +86,7 @@ _ADVANCED OPTIONS_:
 
 ### Twitter Feed
 
-```
+```javascript
 		{
 			module: 'tweet_feed',
 			position: 'bottom_left',
@@ -106,7 +106,7 @@ _ADVANCED OPTIONS_:
 
 ### Word of the day
 
-```
+```javascript
 		{
 			module: 'MMM-wordnik',
 			position: 'bottom_right',
@@ -120,7 +120,7 @@ _ADVANCED OPTIONS_:
 
 ### Todo list
 
-```
+```javascript
 		{
 			module: 'MMM-Wunderlist',
 			position: 'top_right',
