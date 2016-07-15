@@ -141,6 +141,7 @@ modules: [
 		}
 	}
 ]
+```
 
 **ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/newsfeed#configuration-options
 

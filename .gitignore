@@ -50,6 +50,7 @@ Temporary Items
 .fuse_hidden*
 .directory
 .Trash-*
+*~
 
 # Various Magic Mirror ignoramuses and anti-ignoramuses.
 
