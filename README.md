@@ -123,24 +123,22 @@ Once you have a twitter account you will need to log into twitter and get a priv
 ### News Module
 
 ```
-modules: [
-	{
-		module: 'newsfeed',
-		position: 'bottom_bar', // This can be any of the regions. Best results in center regions.
-		config: {
-			feeds: [
-				{
-					title: "New York Times",
-					url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml",
-				},
-				{
-					title: "BBC",
-					url: "http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk",
-				},
-			]
+		{
+			module: 'newsfeed',
+			position: 'bottom_bar', // This can be any of the regions. Best results in center regions.
+			config: {
+				feeds: [
+					{
+						title: "New York Times",
+						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+					},
+					{
+						title: "BBC",
+						url: "http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk",
+					},
+				]
+			}
 		}
-	}
-]
 ```
 
 **ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/newsfeed#configuration-options
