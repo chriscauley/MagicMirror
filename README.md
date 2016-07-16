@@ -16,7 +16,7 @@ Copy and past the following code in between the two specified lines in `config/c
 ```javascript
 		{
 			module: 'clock',
-			position: 'top_left'
+			position: 'top_left',
 			config: {
 				// config options here
 			}
@@ -63,8 +63,8 @@ Calendar module config:
 			position: 'top_right',
 			config: {
 				location: 'Houston',
-				locationID: '',  //ID from bulk.openweather.org/sample/
-				appid: OPEN_WEATHER_APP_ID
+				locationID: '',
+				appid: '3dc9d16750474387b0a3ddd96d55b15c'
 			}
 		},
 ```
@@ -79,9 +79,9 @@ Calendar module config:
 			position: 'top_right',
 			header: 'Weather Forecast',
 			config: {
-							location: 'Houston',
-							locationID: '5128581',  //ID from bulk.openweather.org/sample/
-							appid: OPEN_WEATHER_APP_ID
+				location: 'Houston',
+				locationID: '5128581',
+				appid: '3dc9d16750474387b0a3ddd96d55b15c'
 			}
 		},
 ```
