@@ -29,10 +29,6 @@ You can change the position of the clock to any of the following:
 | --- | --- |
 | `position` | The location of the module in which the module will be loaded. Possible values are `top_ bar`, `top_left`, `top_center`, `top_right`, `upper_third`, `middle_center`, `lower_third`, `bottom_left`, `bottom_center`, `bottom_right`, `bottom_bar`, `fullscreen_above`, and `fullscreen_below`. This field is optional but most modules require this field to set. Check the documentation of the module for more information. Multiple modules with the same position will be ordered based on the order in the configuration file. |
 
-**ADVANCED OPTIONS**: Please come back to this later if you wish to further customize the clock. Additional clock options can be found at the following URL. 
-
-https://github.com/MichMich/MagicMirror/tree/master/modules/default/clock#configuration-options
-
 ### Calendar
 
 Calendar module config:
@@ -53,8 +49,6 @@ Calendar module config:
 		},
 ```
 
-**ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/calendar#configuration-options
-
 ### Current Weather
 
 ```javascript
@@ -68,8 +62,6 @@ Calendar module config:
 			}
 		},
 ```
-
-**ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/currentweather#configuration-options
 
 ### Weather Forecast
 
@@ -85,8 +77,6 @@ Calendar module config:
 			}
 		},
 ```
-
-**ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/weatherforecast#configuration-options
 
 ### Twitter Feed
 
@@ -118,8 +108,6 @@ Once you have a twitter account you will need to log into twitter and get a priv
 
 4) *Copy Tokens to the Config* - Copy the consumer key, consumer secret, access token, and access token secret to the appropriate places in the module config you copied from step 3.
 
-**ADVANCED OPTIONS**: Twitter feed has no advanced options other than the width shown above
-
 ### News Module
 
 ```
@@ -141,8 +129,6 @@ Once you have a twitter account you will need to log into twitter and get a priv
 		},
 ```
 
-**ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/newsfeed#configuration-options
-
 ### Word of the day
 
 ```javascript
@@ -154,8 +140,6 @@ Once you have a twitter account you will need to log into twitter and get a priv
 			}
 		},
 ```
-
-**ADVANCED OPTIONS**: Word of the day has no advanced options.
 
 ### Todo list
 
@@ -192,8 +176,6 @@ To use the todo list you must create a Wunderlist account and then generate an A
 
 9) Load the Magic Mirror from the terminal and the todo list should appear.
 
-**ADVANCED OPTIONS**: https://github.com/paviro/MMM-Wunderlist#configuration-options
-
 ## Alarm Clock
 
 A simple alarm clock for magic mirror. Any keypress shuts off the alarm. Clone this repo to your modules directory and replace the alarm.mp3 file with your own. Then copy the config over, change the position, and set the times for each of the days. Times can be set at the weekday level or bulk times are available for all_days, weekdays, and weekends. Most time formats should be acceptable. The rules for time formats are:
@@ -227,3 +209,20 @@ A simple alarm clock for magic mirror. Any keypress shuts off the alarm. Clone t
       },
     },
 ```
+
+Advanced Options
+========
+
+Compliments: https://github.com/MichMich/MagicMirror/tree/master/modules/default/compliments#compliment-configuration
+
+Clock: https://github.com/MichMich/MagicMirror/tree/master/modules/default/clock#configuration-options
+
+Calendar: https://github.com/MichMich/MagicMirror/tree/master/modules/default/calendar#configuration-options
+
+Current Weather: https://github.com/MichMich/MagicMirror/tree/master/modules/default/currentweather#configuration-options
+
+Weather Forecast: https://github.com/MichMich/MagicMirror/tree/master/modules/default/weatherforecast#configuration-options
+
+News Feed: https://github.com/MichMich/MagicMirror/tree/master/modules/default/newsfeed#configuration-options
+
+Todo List: https://github.com/paviro/MMM-Wunderlist#configuration-options
