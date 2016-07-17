@@ -72,8 +72,8 @@ Calendar module config:
 			header: 'Weather Forecast',
 			config: {
 				location: 'Houston',
-				locationID: '5128581',
-				appid: '3dc9d16750474387b0a3ddd96d55b15c'
+				locationID: '',
+				appid: 'fea2bdc66d1e188f5682b402fe2fd601'
 			}
 		},
 ```
