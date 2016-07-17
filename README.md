@@ -210,6 +210,11 @@ A simple alarm clock for magic mirror. Any keypress shuts off the alarm. Clone t
     },
 ```
 
+Start Mirror on boot
+========
+
+Open the file mm.sh in MagicMirror directory. Uncomment (remove the hash `#` character) from the front of the second line. The computer will now boot into MagicMirror. After booting you can close it by pressing `ctrl+w`.
+
 Advanced Options
 ========
 
@@ -226,3 +231,4 @@ Weather Forecast: https://github.com/MichMich/MagicMirror/tree/master/modules/de
 News Feed: https://github.com/MichMich/MagicMirror/tree/master/modules/default/newsfeed#configuration-options
 
 Todo List: https://github.com/paviro/MMM-Wunderlist#configuration-options
+
