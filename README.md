@@ -138,7 +138,7 @@ Once you have a twitter account you will need to log into twitter and get a priv
 					},
 				]
 			}
-		}
+		},
 ```
 
 **ADVANCED OPTIONS**: https://github.com/MichMich/MagicMirror/tree/master/modules/default/newsfeed#configuration-options
@@ -174,19 +174,23 @@ Once you have a twitter account you will need to log into twitter and get a priv
 
 To use the todo list you must create a Wunderlist account and then generate an API key.
 
-1) Go to https://www.wunderlist.com
+1) Go to https://www.wunderlist.com click "create a free account" (top right button) and fill out the form.
 
-2)
+2) Select any lists you want to start with.
 
-Go to https://developer.wunderlist.com/apps/new - you should already be logged in with the account created above
+3) Create a few todo items.
 
-Enter any name ("Magic Mirror", for example) and enter `http://example.com` for the APP URL and `http://example.com/callback` for the APP CALLBACK. Hit create app.
+4) Go to https://developer.wunderlist.com/apps/new in a new tab - you should already be logged in with the account created above
 
-Copy the CLIENT ID into the `clientID` field in the todo list config.
+5) Enter any name ("Magic Mirror", for example) and enter `http://example.com` for the APP URL and `http://example.com/callback` for the APP CALLBACK. Hit create app.
 
-Press "Create Access Token". Copy the access token at the top of the last page into the `accessToken` field in the todo list config.
+6) Copy the CLIENT ID into the `clientID` field in the todo list config.
 
-Load the Magic Mirror from the terminal and the todo list should appear.
+7) Press "Create Access Token". Copy the access token at the top of the last page into the `accessToken` field in the todo list config.
+
+8) Enter any lists you added in the `lists` config value for the wonderlist app. For example, if you added a "Work" todo list, the config value should read `lists: ["inbox","Work"],`. NOTE: This is case sensetive.
+
+9) Load the Magic Mirror from the terminal and the todo list should appear.
 
 **ADVANCED OPTIONS**: https://github.com/paviro/MMM-Wunderlist#configuration-options
 
@@ -206,7 +210,7 @@ A simple alarm clock for magic mirror. Any keypress shuts off the alarm. Clone t
     {
       module: 'MM-alarm',
       position: "lower_third",
-      soundss: ['/modules/MM-alarm/alarm.mp3'],
+      sounds: ['/modules/MM-alarm/alarm.mp3'],
       config: {
         times: {
           sunday: [],
@@ -218,7 +222,7 @@ A simple alarm clock for magic mirror. Any keypress shuts off the alarm. Clone t
           saturday: [],
           weekdays: [],
           weekends: [],
-          all_week: ['10:15','9:38'],
+          all_week: ['10:15','10:55p'],
         }
       },
     },
